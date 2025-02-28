@@ -1,0 +1,78 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.2.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/interTwin-eu/mlpf-itwinai-plugin:
+      branch: main
+      repo: https://github.com/interTwin-eu/mlpf-itwinai-plugin
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/interTwin-eu/mlpf-itwinai-plugin git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-harlequin-cassowary.sh
+        container: qc.acc_wimpy-amber-orangutan
+  QC.Doc:
+    repos:
+      github.com/interTwin-eu/mlpf-itwinai-plugin find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-goldenrod-gerbil.sh
+        container: qc.doc_flimsy-cream-grasshopper
+      github.com/interTwin-eu/mlpf-itwinai-plugin git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-olivine-barnacle.sh
+        container: qc.doc_pretty-maroon-liger
+      github.com/interTwin-eu/mlpf-itwinai-plugin markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-asparagus-spider.sh
+        container: qc.doc_cranky-sapphire-whale
+  QC.Lic:
+    repos:
+      github.com/interTwin-eu/mlpf-itwinai-plugin licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.wheezy-magnolia-frog.sh
+        container: qc.lic_homey-carmine-hornet
+  QC.Met:
+    repos:
+      github.com/interTwin-eu/mlpf-itwinai-plugin cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-jade-heron.sh
+        container: qc.met_stuffy-zucchini-gerbil
+  QC.Sec:
+    repos:
+      github.com/interTwin-eu/mlpf-itwinai-plugin bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-zucchini-spaniel.sh
+        container: qc.sec_geeky-magenta-clam
+  QC.Sty:
+    repos:
+      github.com/interTwin-eu/mlpf-itwinai-plugin flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-amaranth-shark.sh
+        container: qc.sty_craggy-copper-flamingo
+      github.com/interTwin-eu/mlpf-itwinai-plugin hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-viridian-caracal.sh
+        container: qc.sty_squirrely-gold-newt
+      github.com/interTwin-eu/mlpf-itwinai-plugin jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-white-bonobo.sh
+        container: qc.sty_craggy-green-pig
+  QC.Uni:
+    repos:
+      github.com/interTwin-eu/mlpf-itwinai-plugin commands:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-fuchsia-earwig.sh
+        container: qc.uni_nippy-platinum-lynx
+  QC.Ver:
+    repos:
+      github.com/interTwin-eu/mlpf-itwinai-plugin get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-ivory-spaniel.sh
+        container: qc.ver_foggy-emerald-zebra
+timeout: 5400
