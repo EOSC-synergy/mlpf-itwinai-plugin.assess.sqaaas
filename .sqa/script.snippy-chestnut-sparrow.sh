@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/interTwin-eu/mlpf-itwinai-plugin &&
-    cffconvert --validate 
+cd github.com/matbun/mlpf-itwinai-plugin &&
+    get_git_tags.py
 )

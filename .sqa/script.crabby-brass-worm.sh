@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/interTwin-eu/mlpf-itwinai-plugin &&
-    flake8 .
+cd github.com/matbun/mlpf-itwinai-plugin &&
+    bandit -f json --quiet  --confidence-level high --severity-level high --recursive  .
 )

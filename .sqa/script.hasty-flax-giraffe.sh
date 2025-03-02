@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/interTwin-eu/mlpf-itwinai-plugin &&
-    hadolint Dockerfile --failure-threshold error
+cd github.com/matbun/mlpf-itwinai-plugin &&
+    licensee detect . --confidence 60 --json 
 )

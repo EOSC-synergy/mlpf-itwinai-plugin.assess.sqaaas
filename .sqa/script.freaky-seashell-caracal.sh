@@ -4,9 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/interTwin-eu/mlpf-itwinai-plugin &&
-    python -m venv .venv &&&&
-    source .venv/bin/activate &&&&
-    .venv/bin/pip install &&&&
-    .venv/bin/pytest -v tests/
+cd github.com/matbun/mlpf-itwinai-plugin &&
+    hadolint Dockerfile --failure-threshold error
 )
