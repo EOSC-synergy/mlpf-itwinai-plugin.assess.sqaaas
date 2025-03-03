@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/matbun/mlpf-itwinai-plugin git:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-xanthic-shark.sh
-        container: qc.acc_wiggy-sangria-dogfish
+        - /usr/bin/env sh .sqa/script.sunny-magenta-ostrich.sh
+        container: qc.acc_breezy-olive-kudu
   QC.Doc:
     repos:
       github.com/matbun/mlpf-itwinai-plugin find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-yellow-coral.sh
-        container: qc.doc_tasty-crimson-gorilla
+        - /usr/bin/env sh .sqa/script.scummy-amaranth-mule.sh
+        container: qc.doc_leaky-pumpkin-neanderthal
       github.com/matbun/mlpf-itwinai-plugin git:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-cyan-chimpanzee.sh
-        container: qc.doc_cheeky-malachite-beagle
+        - /usr/bin/env sh .sqa/script.fuzzy-heliotrope-opossum.sh
+        container: qc.doc_shabby-orchid-chicken
       github.com/matbun/mlpf-itwinai-plugin markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-taupe-cichlid.sh
-        container: qc.doc_crappy-tangerine-argentino
+        - /usr/bin/env sh .sqa/script.woozy-bronze-vulture.sh
+        container: qc.doc_craggy-emerald-fox
   QC.Lic:
     repos:
       github.com/matbun/mlpf-itwinai-plugin licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-flax-giraffe.sh
-        container: qc.lic_sleepy-sangria-tamarin
+        - /usr/bin/env sh .sqa/script.seedy-harlequin-burmese.sh
+        container: qc.lic_gloppy-teal-bullfrog
   QC.Met:
     repos:
       github.com/matbun/mlpf-itwinai-plugin cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-ochre-chow.sh
-        container: qc.met_cozy-cinnamon-blue
+        - /usr/bin/env sh .sqa/script.muggy-khaki-dodo.sh
+        container: qc.met_seedy-chartreuse-moorhen
   QC.Sec:
     repos:
       github.com/matbun/mlpf-itwinai-plugin bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-brass-worm.sh
-        container: qc.sec_snappy-periwinkle-bulldog
+        - /usr/bin/env sh .sqa/script.clammy-thistle-labradoodle.sh
+        container: qc.sec_goopy-lilac-dachshund
   QC.Sty:
     repos:
       github.com/matbun/mlpf-itwinai-plugin flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-beige-tzu.sh
-        container: qc.sty_crabby-ruby-bulldog
+        - /usr/bin/env sh .sqa/script.homey-amber-cougar.sh
+        container: qc.sty_boozy-peach-mastiff
       github.com/matbun/mlpf-itwinai-plugin hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-seashell-caracal.sh
-        container: qc.sty_skimpy-heliotrope-toucan
+        - /usr/bin/env sh .sqa/script.lanky-cinnabar-beetle.sh
+        container: qc.sty_bluesy-gamboge-cockroach
       github.com/matbun/mlpf-itwinai-plugin jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-brass-orangutan.sh
-        container: qc.sty_lanky-mauve-gopher
+        - /usr/bin/env sh .sqa/script.boozy-jade-tarantula.sh
+        container: qc.sty_foggy-turquoise-mandrill
   QC.Uni:
     repos:
       github.com/matbun/mlpf-itwinai-plugin commands:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-salmon-angelfish.sh
-        container: qc.uni_droopy-vermilion-bulldog
+        - /usr/bin/env sh .sqa/script.homely-bronze-spider.sh
+        container: qc.uni_sleazy-chartreuse-armadillo
   QC.Ver:
     repos:
       github.com/matbun/mlpf-itwinai-plugin get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-chestnut-sparrow.sh
-        container: qc.ver_stuffy-orchid-chow
+        - /usr/bin/env sh .sqa/script.pokey-xanthic-llama.sh
+        container: qc.ver_clammy-alizarin-dhole
 timeout: 5400
